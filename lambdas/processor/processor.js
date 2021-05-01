@@ -1,6 +1,6 @@
 const { sendMessage } = require("./dynamodb")
 // Handler
-async function processor(event, context) {
+async function handler(event, context) {
   console.log('Started handling event', event)
   const message = JSON.parse(event.Records[0].body)
   const processedMessage = processMessage(message)
@@ -21,4 +21,4 @@ const processMessage = function (messageAsString) {
 }
 
 exports.processMessage = processMessage
-exports.processor = processor
+exports.handler = handler
