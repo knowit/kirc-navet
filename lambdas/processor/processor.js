@@ -16,9 +16,16 @@ const processMessage = function (messageAsString) {
     timestamp: new Date().toISOString(),
     id: message.id,
     nickname: message.nickname,
-    style: message.style,
+    style: cssParser(message.style),
   }
+}
+
+function cssParser(json){
+  return `color:${json.color};font-size:${json.size};background-color:${json.bgcolor};` + 
+  `${(json.bold === "true") && "font-weight:bold;"}${(json.italic === "true") && "font-style:italic;"}`
 }
 
 exports.processMessage = processMessage
 exports.handler = handler
+
+//  { color: "red", bgcolor: "black" } -> "color:red;backgorund-color:black" 
