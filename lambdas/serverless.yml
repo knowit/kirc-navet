@@ -1,6 +1,6 @@
-org: tofagerl
-app: kirc-input
-service: kirc-input
+org: goplen
+app: kirc-input-goplen
+service: kirc-input-goplen
 
 frameworkVersion: '2'
 
@@ -32,7 +32,7 @@ resources:
     Queue:
       Type: 'AWS::SQS::Queue'
       Properties:
-        QueueName: 'kirc-input-queue.fifo'
+        QueueName: 'kirc-input-queue-goplen.fifo'
         FifoQueue: true
         ContentBasedDeduplication: true
 
