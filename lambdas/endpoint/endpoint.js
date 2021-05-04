@@ -7,7 +7,7 @@ AWS.config.update({ region: "eu-central-1" });
 module.exports.handler = async (event) => {
   console.log("event", event);
   const message = JSON.stringify(event.body);
-  console.log("message", message);
+  console.log("message", message); 
   console.log("QUEUE_URL", process.env.QUEUE_URL)
   // TODO:  validate event
 

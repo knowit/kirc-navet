@@ -1,6 +1,6 @@
-org: tofagerl
-app: kirc-input
-service: kirc-input
+org: broonbjugn
+app: kirc-input-broon2
+service: kirc-input-broon2
 
 frameworkVersion: '2'
 
@@ -32,7 +32,7 @@ resources:
     Queue:
       Type: 'AWS::SQS::Queue'
       Properties:
-        QueueName: 'kirc-input-queue.fifo'
+        QueueName: 'kirc-input-queue-broonbjugn2.fifo'
         FifoQueue: true
         ContentBasedDeduplication: true
 
