@@ -1,6 +1,6 @@
-org: tofagerl
-app: kirc-input
-service: kirc-input
+org: sverrejb
+app: kirc-input-sverre
+service: kirc-input-sverre
 
 frameworkVersion: '2'
 
@@ -32,7 +32,7 @@ resources:
     Queue:
       Type: 'AWS::SQS::Queue'
       Properties:
-        QueueName: 'kirc-input-queue.fifo'
+        QueueName: 'kirc-input-queue-sverre.fifo'
         FifoQueue: true
         ContentBasedDeduplication: true
 
