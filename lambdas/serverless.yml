@@ -1,6 +1,6 @@
-org: tofagerl
-app: kirc-input
-service: kirc-input
+org: kirnav1
+app: kirc-input-duck
+service: kirc-input-duck
 
 frameworkVersion: '2'
 
@@ -32,7 +32,7 @@ resources:
     Queue:
       Type: 'AWS::SQS::Queue'
       Properties:
-        QueueName: 'kirc-input-queue.fifo'
+        QueueName: 'kirc-input-duck-queue.fifo'
         FifoQueue: true
         ContentBasedDeduplication: true
 
